@@ -1,8 +1,6 @@
 {
   "framework": null,
-  "buildCommand": "",
-  "public": false,
-  "github": {
-    "enabled": false
-  }
+  "buildCommand": "pnpm install -w && pnpm --filter @liquity2/app... build",
+  "outputDirectory": "frontend/app/out",
+  "public": false
 }
