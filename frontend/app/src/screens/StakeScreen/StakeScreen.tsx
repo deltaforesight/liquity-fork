@@ -203,7 +203,7 @@ function BribesInfoBox({
                 })}
               >
                 <div
-                  title={`${fmtnum(data.boldAmount)} BOLD`}
+                  title={`${fmtnum(data.boldAmount)} JPYdf`}
                   className={css({
                     display: "flex",
                     alignItems: "center",

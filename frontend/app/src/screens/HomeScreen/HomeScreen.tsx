@@ -117,7 +117,7 @@ function BorrowTable({
   return (
     <div className={css({ gridArea: "borrow" })}>
       <HomeTable
-        title="Borrow BOLD against ETH and staked ETH"
+        title="Borrow JPYdf against ETH and staked ETH"
         subtitle="You can adjust your loans, including your interest rate, at any time"
         icon={<IconBorrow />}
         columns={columns}
@@ -461,7 +461,7 @@ function EarnRewardsRow({
                 </TokenIcon.Group>
               </div>
             }
-            title={`Earn BOLD with ${token?.name}`}
+            title={`Earn JPYdf with ${token?.name}`}
           />
         </td>
       )}

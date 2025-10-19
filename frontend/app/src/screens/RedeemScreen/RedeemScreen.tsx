@@ -62,7 +62,7 @@ export function RedeemScreen() {
       heading={{
         title: (
           <HFlex>
-            Redeem <TokenIcon symbol="BOLD" /> BOLD for
+            Redeem <TokenIcon symbol="BOLD" /> JPYdf for
             <TokenIcon.Group>
               {branches.map((b) => getCollToken(b.branchId)).map(({ symbol }) => (
                 <TokenIcon
@@ -101,7 +101,7 @@ export function RedeemScreen() {
                     && dn.gt(amount.parsed, boldBalance.data)
                 ? {
                   mode: "error",
-                  message: `Insufficient BOLD balance. You have ${fmtnum(boldBalance.data)} BOLD.`,
+                  message: `Insufficient JPYdf balance. You have ${fmtnum(boldBalance.data)} JPYdf.`,
                 }
                 : null}
               label="Redeeming"
@@ -115,7 +115,7 @@ export function RedeemScreen() {
                 end: (
                   boldBalance.data && dn.gt(boldBalance.data, 0) && (
                     <TextButton
-                      label={`Max ${fmtnum(boldBalance.data)} BOLD`}
+                      label={`Max ${fmtnum(boldBalance.data)} JPYdf`}
                       onClick={() => {
                         if (boldBalance.data) {
                           amount.setValue(dn.toString(boldBalance.data));
@@ -225,7 +225,7 @@ export function RedeemScreen() {
               },
             })}
           >
-            You will be charged a dynamic redemption fee (the more redemptions, the higher the fee). Trading BOLD on an
+            You will be charged a dynamic redemption fee (the more redemptions, the higher the fee). Trading JPYdf on an
             exchange could be more favorable.{" "}
             <Link
               href="https://docs.liquity.org/v2-faq/redemptions-and-delegation"

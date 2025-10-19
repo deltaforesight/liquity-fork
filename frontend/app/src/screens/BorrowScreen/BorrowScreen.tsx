@@ -210,7 +210,7 @@ export function BorrowScreen() {
                 })}
               >
                 <TokenIcon symbol="BOLD" />
-                {NBSP}BOLD
+                {NBSP}JPYdf
               </div>,
             )}
           </div>
@@ -291,14 +291,14 @@ export function BorrowScreen() {
             contextual={
               <InputField.Badge
                 icon={<TokenIcon symbol="BOLD" />}
-                label="BOLD"
+                label="JPYdf"
               />
             }
             drawer={debt.isFocused ? null : (
               isBelowMinDebt
                 ? {
                   mode: "error",
-                  message: `You must borrow at least ${fmtnum(MIN_DEBT, 2)} BOLD.`,
+                  message: `You must borrow at least ${fmtnum(MIN_DEBT, 2)} JPYdf.`,
                 }
                 : isAboveMaxLtv
                 ? {

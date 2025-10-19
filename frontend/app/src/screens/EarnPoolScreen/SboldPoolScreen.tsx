@@ -231,28 +231,28 @@ export function PanelUpdate({
               drawer={insufficientBalance
                 ? {
                   mode: "error",
-                  message: `Insufficient balance. You have ${fmtnum(boldBalance)} BOLD.`,
+                  message: `Insufficient balance. You have ${fmtnum(boldBalance)} JPYdf.`,
                 }
                 : withdrawAboveDeposit
                 ? {
                   mode: "error",
                   message: hasAnyBoldDeposited
                     ? `You can’t withdraw more than you have deposited.`
-                    : `No BOLD deposited.`,
+                    : `No JPYdf deposited.`,
                 }
                 : null}
               contextual={
                 <InputTokenBadge
                   background={false}
                   icon={<TokenIcon symbol={mode === "deposit" ? "BOLD" : "SBOLD"} />}
-                  label={mode === "deposit" ? "BOLD" : "sBOLD"}
+                  label={mode === "deposit" ? "JPYdf" : "sBOLD"}
                 />
               }
               id="input-deposit-change"
               label={{
                 start: mode === "redeem"
                   ? "Redeem sBOLD"
-                  : "Deposit BOLD",
+                  : "Deposit JPYdf",
                 end: (
                   <Tabs
                     compact
@@ -296,7 +296,7 @@ export function PanelUpdate({
                   ? (
                     dn.gt(boldBalance, 0) && (
                       <TextButton
-                        label={`Max ${fmtnum(boldBalance, 2)} BOLD`}
+                        label={`Max ${fmtnum(boldBalance, 2)} JPYdf`}
                         onClick={() => {
                           setValue(dn.toString(boldBalance));
                         }}

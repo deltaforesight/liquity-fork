@@ -51,7 +51,7 @@ export function PositionCardBorrow({
   const title = token
     ? [
       `Loan ID: ${shortenTroveId(troveId)}…`,
-      `Debt: ${fmtnum(borrowed, "full")} BOLD`,
+      `Debt: ${fmtnum(borrowed, "full")} JPYdf`,
       `Collateral: ${fmtnum(deposit, "full")} ${token.name}`,
       `Interest rate: ${fmtnum(interestRate, "pctfull")}%`,
     ]
@@ -71,7 +71,7 @@ export function PositionCardBorrow({
             color: "positionContent",
           })}
         >
-          <div>BOLD loan</div>
+          <div>JPYdf loan</div>
           {statusTag}
         </div>
       }

@@ -1,4 +1,4 @@
-# Liquity V2 App
+# Delta Foresight App
 
 ## Preview
 
@@ -256,7 +256,7 @@ NEXT_PUBLIC_KNOWN_INITIATIVES_URL=https://api.liquity.org/v2/known-initiatives/e
 
 ### `NEXT_PUBLIC_LIQUITY_STATS_URL`
 
-URL for fetching Liquity protocol statistics.
+URL for fetching Delta Foresight protocol statistics.
 
 ```dosini
 # Example
@@ -329,7 +329,7 @@ To disable a Trove explorer, set the corresponding variable to an empty string i
 
 ### `NEXT_PUBLIC_CONTRACT_…`
 
-Addresses of the Liquity contracts.
+Addresses of the Delta Foresight contracts.
 
 </details>
 
@@ -337,7 +337,7 @@ Addresses of the Liquity contracts.
 
 ```
 src/
-  abi/         # ABIs of the Liquity contracts
+  abi/         # ABIs of the Delta Foresight contracts
   app/         # The Next.js app (mostly routing only)
   comps/       # UI Components
   screens/     # App Screens (used by /app routing components)

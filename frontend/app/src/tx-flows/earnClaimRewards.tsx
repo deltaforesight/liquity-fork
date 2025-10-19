@@ -78,12 +78,12 @@ export const earnClaimRewards: FlowDeclaration<EarnClaimRewardsRequest> = {
     return (
       <>
         <TransactionDetailsRow
-          label={compound ? "Compound BOLD rewards" : "Claim BOLD rewards"}
+          label={compound ? "Compound JPYdf rewards" : "Claim JPYdf rewards"}
           value={[
             <Amount
               key="start"
               value={rewardsBold}
-              suffix=" BOLD"
+              suffix=" JPYdf"
             />,
             <Amount
               key="end"

@@ -85,7 +85,7 @@ export function LoanScreenCard({
   );
 
   const nftUrl = useTroveNftUrl(loan?.branchId ?? null, troveId);
-  const title = mode === "multiply" ? "Multiply" : "BOLD loan";
+  const title = mode === "multiply" ? "Multiply" : "JPYdf loan";
 
   return (
     <ScreenCard
@@ -391,7 +391,7 @@ function LoanCard(props: {
         troveId,
         nftUrl,
       }) => {
-        const title = mode === "multiply" ? "Multiply" : "BOLD loan";
+        const title = mode === "multiply" ? "Multiply" : "JPYdf loan";
         return (
           <a.div
             className={css({
@@ -514,7 +514,7 @@ function LoanCard(props: {
                           ),
 
                           label: mode === "multiply"
-                            ? "Convert to BOLD loan"
+                            ? "Convert to JPYdf loan"
                             : "Convert to Multiply position",
                         },
                         {
@@ -648,7 +648,7 @@ function LoanCard(props: {
                       )
                       : (
                         <div
-                          title={`${fmtnum(loan.borrowed)} BOLD`}
+                          title={`${fmtnum(loan.borrowed)} JPYdf`}
                           className={css({
                             display: "flex",
                             alignItems: "center",
