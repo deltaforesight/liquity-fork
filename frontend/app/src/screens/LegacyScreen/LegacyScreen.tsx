@@ -88,7 +88,7 @@ export function LegacyScreen() {
   return (
     <Screen
       heading={{
-        title: "Liquity V2-Legacy Positions",
+        title: "Delta Foresight-Legacy Positions",
       }}
     >
       {positionsTransition((style, { account, legacyPositions }) => (
@@ -119,10 +119,10 @@ export function LegacyScreen() {
                 {legacyPositions.isLoading
                   ? "Fetching your legacy positions…"
                   : legacyPositions.data?.hasAnyPosition
-                  ? "You have active positions in Liquity V2-Legacy."
-                    + " These positions are not compatible with Liquity V2."
+                  ? "You have active positions in Delta Foresight-Legacy."
+                    + " These positions are not compatible with Delta Foresight."
                     + " You can withdraw these positions from here at any time."
-                  : "You do not have any active positions in Liquity V2-Legacy."}
+                  : "You do not have any active positions in Delta Foresight-Legacy."}
               </div>
               {legacyPositions.isSuccess && (
                 <div
@@ -172,7 +172,7 @@ function EarnPositionsTable() {
   return (
     <HomeTable
       title="Legacy Earn Positions"
-      subtitle="Your positions in the Liquity V2-Legacy Stability Pools."
+      subtitle="Your positions in the Delta Foresight-Legacy Stability Pools."
       loading={legacyPositions.isLoading && "Fetching legacy earn positions…"}
       icon={<IconEarn />}
       columns={[
@@ -290,7 +290,7 @@ function LoanPositionsTable() {
   return (
     <HomeTable
       title="Legacy Loan Positions"
-      subtitle="Your currently active loans in Liquity V2-Legacy."
+      subtitle="Your currently active loans in Delta Foresight-Legacy."
       loading={legacyPositions.isLoading && "Fetching legacy loan positions…"}
       icon={<IconBorrow />}
       columns={[
@@ -360,12 +360,12 @@ function LoanPositionsTable() {
                 })}
               >
                 {!hasEnoughBold && (
-                  <InfoTooltip level="warning" heading="Insufficient Legacy BOLD">
-                    Your current Legacy BOLD balance ({fmtnum(
+                  <InfoTooltip level="warning" heading="Insufficient Legacy JPYdf">
+                    Your current Legacy JPYdf balance ({fmtnum(
                       boldBalance,
                       { digits: 2 },
-                    )} BOLD) is too low to close this loan. You need at least {fmtnum(debt, { digits: 2 })}{" "}
-                    BOLD to close this loan.
+                    )} JPYdf) is too low to close this loan. You need at least {fmtnum(debt, { digits: 2 })}{" "}
+                    JPYdf to close this loan.
                   </InfoTooltip>
                 )}
                 <Button
@@ -405,7 +405,7 @@ function StakingPositionsTable() {
   return (
     <HomeTable
       title="Legacy Staking Position"
-      subtitle="Your staking position in Liquity V2-Legacy."
+      subtitle="Your staking position in Delta Foresight-Legacy."
       loading={legacyPositions.isLoading && "Fetching legacy staking position…"}
       icon={<IconStake />}
       columns={["Staked LQTY", null] as const}
@@ -495,7 +495,7 @@ function RedeemSection() {
   return (
     <HomeTable
       title="Legacy Redemption"
-      subtitle="Redeem your Legacy BOLD for ETH and LSTs."
+      subtitle="Redeem your Legacy JPYdf for ETH and LSTs."
       icon={<IconEarn />}
       columns={[]}
       rows={[
@@ -526,7 +526,7 @@ function RedeemSection() {
                     contextual={
                       <InputField.Badge
                         icon={<TokenIcon symbol="BOLD" />}
-                        label="Legacy BOLD"
+                        label="Legacy JPYdf"
                       />
                     }
                     drawer={amount.isFocused
@@ -536,7 +536,7 @@ function RedeemSection() {
                           && dn.gt(amount.parsed, boldBalance)
                       ? {
                         mode: "error",
-                        message: `Insufficient BOLD balance. You have ${fmtnum(boldBalance)} BOLD.`,
+                        message: `Insufficient JPYdf balance. You have ${fmtnum(boldBalance)} JPYdf.`,
                       }
                       : null}
                     label="Redeeming"
@@ -550,7 +550,7 @@ function RedeemSection() {
                       end: (
                         boldBalance && dn.gt(boldBalance, 0) && (
                           <TextButton
-                            label={`Max ${fmtnum(boldBalance)} Legacy BOLD`}
+                            label={`Max ${fmtnum(boldBalance)} Legacy JPYdf`}
                             onClick={() => {
                               amount.setValue(dn.toString(boldBalance));
                             }}
@@ -674,7 +674,7 @@ function RedeemSection() {
               >
                 <Button
                   disabled={!allowSubmit}
-                  label="Redeem Legacy BOLD"
+                  label="Redeem Legacy JPYdf"
                   mode="primary"
                   size="small"
                   onClick={() => {
@@ -719,7 +719,7 @@ function TokenAmount({
     <div
       title={fmtnum(value, {
         digits: digits ?? undefined,
-        suffix: " " + (symbol === "LEGACY_BOLD" ? "Legacy BOLD" : token.name),
+        suffix: " " + (symbol === "LEGACY_BOLD" ? "Legacy JPYdf" : token.name),
       })}
       className={css({
         display: "flex",

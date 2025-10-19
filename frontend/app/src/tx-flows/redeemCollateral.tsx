@@ -49,16 +49,16 @@ export const redeemCollateral: FlowDeclaration<RedeemCollateralRequest> = {
           ]}
         />
         <TransactionDetailsRow
-          label="Reedeming BOLD"
+          label="Reedeming JPYdf"
           value={[
             <Amount
               key="start"
               value={boldChange}
               fallback="fetching…"
-              suffix=" BOLD"
+              suffix=" JPYdf"
             />,
             <Fragment key="end">
-              Estimated BOLD that will be redeemed.
+              Estimated JPYdf that will be redeemed.
             </Fragment>,
           ]}
         />
@@ -88,7 +88,7 @@ export const redeemCollateral: FlowDeclaration<RedeemCollateralRequest> = {
   },
   steps: {
     approve: {
-      name: () => "Approve BOLD",
+      name: () => "Approve JPYdf",
       Status: TransactionStatus,
       async commit({ request, writeContract }) {
         const CollateralRegistry = getProtocolContract("CollateralRegistry");
@@ -105,7 +105,7 @@ export const redeemCollateral: FlowDeclaration<RedeemCollateralRequest> = {
       },
     },
     redeemCollateral: {
-      name: () => "Redeem BOLD",
+      name: () => "Redeem JPYdf",
       Status: TransactionStatus,
       async commit({ request, writeContract }) {
         const CollateralRegistry = getProtocolContract("CollateralRegistry");

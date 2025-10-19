@@ -124,7 +124,7 @@ export const openBorrowPosition: FlowDeclaration<OpenBorrowPositionRequest> = {
               key="start"
               fallback="…"
               value={boldAmountWithFee}
-              suffix=" BOLD"
+              suffix=" JPYdf"
             />,
             <div
               key="end"
@@ -138,9 +138,9 @@ export const openBorrowPosition: FlowDeclaration<OpenBorrowPositionRequest> = {
                 fallback="…"
                 prefix="Incl. "
                 value={upfrontFee.data}
-                suffix=" BOLD creation fee"
+                suffix=" JPYdf creation fee"
               />
-              <InfoTooltip heading="BOLD creation fee">
+              <InfoTooltip heading="JPYdf creation fee">
                 This fee is charged when you open a new loan or increase your debt. It corresponds to 7 days of average
                 interest for the respective collateral asset.
               </InfoTooltip>
@@ -179,7 +179,7 @@ export const openBorrowPosition: FlowDeclaration<OpenBorrowPositionRequest> = {
                         <Amount
                           format="2z"
                           prefix="~"
-                          suffix=" BOLD per year"
+                          suffix=" JPYdf per year"
                           value={yearlyBoldInterest}
                         />
                       </>
@@ -204,7 +204,7 @@ export const openBorrowPosition: FlowDeclaration<OpenBorrowPositionRequest> = {
                     boldAmountWithFee,
                     request.annualInterestRate,
                   )}
-                  suffix=" BOLD per year"
+                  suffix=" JPYdf per year"
                 />,
               ]}
             />

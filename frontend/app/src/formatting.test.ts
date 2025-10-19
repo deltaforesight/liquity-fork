@@ -42,7 +42,7 @@ test("fmtnum() works", () => {
 
   // prefix / suffix
   expect(fmtnum(dn.from(123.456), { prefix: "$" })).toBe("$123.456");
-  expect(fmtnum(dn.from(123.456), { suffix: " BOLD" })).toBe("123.456 BOLD");
+  expect(fmtnum(dn.from(123.456), { suffix: " JPYdf" })).toBe("123.456 JPYdf");
 
   // dust
   expect(fmtnum(dn.from(0.0000001), "2z")).toBe("<0.01");

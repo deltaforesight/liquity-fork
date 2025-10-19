@@ -67,7 +67,7 @@ export const closeLoanPosition: FlowDeclaration<CloseLoanPositionRequest> = {
               <Amount
                 key="start"
                 value={amountToRepay}
-                suffix={` ${repayWithCollateral ? collateral.name : "BOLD"}`}
+                suffix={` ${repayWithCollateral ? collateral.name : "JPYdf"}`}
               />,
             ]}
           />
@@ -99,7 +99,7 @@ export const closeLoanPosition: FlowDeclaration<CloseLoanPositionRequest> = {
 
   steps: {
     approveBold: {
-      name: () => "Approve BOLD",
+      name: () => "Approve JPYdf",
       Status: (props) => (
         <TransactionStatus
           {...props}

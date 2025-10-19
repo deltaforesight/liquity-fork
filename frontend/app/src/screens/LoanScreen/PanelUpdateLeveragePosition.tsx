@@ -221,7 +221,7 @@ export function PanelUpdateLeveragePosition({
                 : leverageField.leverageFactorChange > 0
                 ? (
                   <Field.FooterInfoPriceImpact
-                    inputTokenName="BOLD"
+                    inputTokenName="JPYdf"
                     outputTokenName={collToken.name}
                     priceImpact={leverageField.priceImpact}
                   />
@@ -229,7 +229,7 @@ export function PanelUpdateLeveragePosition({
                 : (
                   <Field.FooterInfoPriceImpact
                     inputTokenName={collToken.name}
-                    outputTokenName="BOLD"
+                    outputTokenName="JPYdf"
                     priceImpact={leverageField.priceImpact}
                   />
                 ),
@@ -320,14 +320,14 @@ export function PanelUpdateLeveragePosition({
                 label: "Debt",
                 before: (
                   <Amount
-                    title={`${fmtnum(initialLoanDetails.debt, "full")} BOLD`}
+                    title={`${fmtnum(initialLoanDetails.debt, "full")} JPYdf`}
                     value={initialLoanDetails.debt}
                   />
                 ),
                 after: (
                   <Amount
                     value={newLoanDetails.debt}
-                    suffix=" BOLD"
+                    suffix=" JPYdf"
                   />
                 ),
               },

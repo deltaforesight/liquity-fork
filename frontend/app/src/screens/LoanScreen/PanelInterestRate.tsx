@@ -42,7 +42,7 @@ export function PanelInterestRate({
   const deposit = useInputFieldValue((value) => `${fmtnum(value, "full")} ${collToken.symbol}`, {
     defaultValue: dn.toString(loan.deposit),
   });
-  const debt = useInputFieldValue((value) => `${fmtnum(value, "full")} BOLD`, {
+  const debt = useInputFieldValue((value) => `${fmtnum(value, "full")} JPYdf`, {
     defaultValue: dn.toString(loan.borrowed),
   });
 
@@ -231,12 +231,12 @@ export function PanelInterestRate({
             {
               label: (
                 <>
-                  <div>BOLD interest per year</div>
+                  <div>JPYdf interest per year</div>
                   <InfoTooltip {...infoTooltipProps(content.generalInfotooltips.interestRateBoldPerYear)} />
                 </>
               ),
-              before: <Amount value={boldInterestPerYearPrev} suffix=" BOLD" />,
-              after: <Amount value={boldInterestPerYear} suffix=" BOLD" />,
+              before: <Amount value={boldInterestPerYearPrev} suffix=" JPYdf" />,
+              after: <Amount value={boldInterestPerYear} suffix=" JPYdf" />,
             },
           ]}
         />

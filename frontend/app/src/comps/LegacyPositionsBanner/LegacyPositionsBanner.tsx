@@ -66,7 +66,7 @@ export function LegacyPositionsBanner() {
           >
             <IconWarning size={16} />
             <div>
-              {!compact && <>{"You still have open positions on Liquity V2-Legacy. "}</>}
+              {!compact && <>{"You still have open positions on Delta Foresight-Legacy. "}</>}
               <LinkTextButton
                 href="/legacy"
                 label={
@@ -80,7 +80,7 @@ export function LegacyPositionsBanner() {
                     {compact
                       ? (
                         <div>
-                          Your Liquity V2-Legacy positions
+                          Your Delta Foresight-Legacy positions
                         </div>
                       )
                       : (

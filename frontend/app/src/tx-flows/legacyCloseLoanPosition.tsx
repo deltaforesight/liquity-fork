@@ -59,7 +59,7 @@ export const legacyCloseLoanPosition: FlowDeclaration<LegacyCloseLoanPositionReq
               <Amount
                 key="start"
                 value={trove.borrowed}
-                suffix=" BOLD"
+                suffix=" JPYdf"
               />,
             ]}
           />
@@ -91,7 +91,7 @@ export const legacyCloseLoanPosition: FlowDeclaration<LegacyCloseLoanPositionReq
 
   steps: {
     approveBold: {
-      name: () => "Approve BOLD",
+      name: () => "Approve JPYdf",
       Status: (props) => (
         <TransactionStatus
           {...props}
@@ -121,7 +121,7 @@ export const legacyCloseLoanPosition: FlowDeclaration<LegacyCloseLoanPositionReq
       },
     },
 
-    // Close a loan position, repaying with BOLD or with the collateral
+    // Close a loan position, repaying with JPYdf or with the collateral
     closeLoanPosition: {
       name: () => "Close loan",
       Status: TransactionStatus,
@@ -131,7 +131,7 @@ export const legacyCloseLoanPosition: FlowDeclaration<LegacyCloseLoanPositionReq
         const branch = getLegacyBranch(trove.branchId);
         const { LEVERAGE_ZAPPER } = branch;
 
-        // repay with BOLD => get ETH
+        // repay with JPYdf => get ETH
         if (branch.symbol === "ETH") {
           return ctx.writeContract({
             abi: LeverageWETHZapper,
@@ -141,7 +141,7 @@ export const legacyCloseLoanPosition: FlowDeclaration<LegacyCloseLoanPositionReq
           });
         }
 
-        // repay with BOLD => get LST
+        // repay with JPYdf => get LST
         return ctx.writeContract({
           abi: LeverageLSTZapper,
           address: LEVERAGE_ZAPPER,

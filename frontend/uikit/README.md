@@ -1,1 +1,1 @@
-# Liquity V2 UI kit
+# Delta Foresight UI kit

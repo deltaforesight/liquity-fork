@@ -103,7 +103,7 @@ export function BottomBar() {
             <div
               title={`Total supply: ${
                 fmtnum(boldSupply, {
-                  suffix: " BOLD",
+                  suffix: " JPYdf",
                   preset: "2z",
                 })
               }`}
@@ -132,7 +132,7 @@ export function BottomBar() {
                     fallback="…"
                     format="compact"
                     value={boldSupply}
-                    suffix=" BOLD"
+                    suffix=" JPYdf"
                   />
                 )}
               </span>
@@ -150,7 +150,7 @@ export function BottomBar() {
                       whiteSpace: "nowrap",
                     })}
                   >
-                    Redeem BOLD
+                    Redeem JPYdf
                   </div>
                 }
                 className={css({
@@ -247,7 +247,7 @@ function Price({ symbol }: { symbol: Exclude<TokenSymbol, "SBOLD"> }) {
         symbol={symbol}
         title={null}
       />
-      <span>{symbol}</span>
+      <span>{symbol === "BOLD" ? "JPYdf" : symbol}</span>
     </div>
   );
   return (
